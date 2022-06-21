@@ -10,25 +10,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import testAutomations.Kullanici;
 
 
-public class Sil extends testAutomations.TestBase {
+public class SilEvet extends testAutomations.TestBase {
     private String baseUrl;
     private boolean acceptNextAlert = true;
 
 
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/button[8]")
-    public WebElement CiktiAraclari;
+    @FindBy(xpath = "//button[@id='btnHaritayıTemizle']")
+    public WebElement tumunuSil;
 
 
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[7]/button[1]/i[1]")
-    public WebElement EkranGoruntusuAl;
 
+    @FindBy(css = "body > div.ui.page.modals.dimmer.transition.visible.active > div > div.actions > div > button.ui.green.button")
+    public WebElement  evet;
 
 
 
 
 
     @Test
-    public void testSil() throws Exception {
+    public void testSilEvet() throws Exception {
         PageFactory.initElements(driver, this);
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -40,11 +40,11 @@ public class Sil extends testAutomations.TestBase {
 
 
 
-        Fwait.until(ExpectedConditions.visibilityOf(CiktiAraclari));
-        CiktiAraclari.click();
+        Fwait.until(ExpectedConditions.visibilityOf(tumunuSil));
+        tumunuSil.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(EkranGoruntusuAl));
-        EkranGoruntusuAl.click();
+        Fwait.until(ExpectedConditions.visibilityOf(evet));
+        evet.click();
 
 
 

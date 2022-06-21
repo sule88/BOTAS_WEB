@@ -1,4 +1,4 @@
-package testAutomations.seleniumTests;
+package testAutomations;
 
 import org.junit.Ignore;
 import org.junit.Test;

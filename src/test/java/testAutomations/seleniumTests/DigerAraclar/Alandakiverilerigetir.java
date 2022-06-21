@@ -11,22 +11,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import testAutomations.Kullanici;
 
 
-public class Mesafeanalizaraci extends testAutomations.TestBase {
+public class Alandakiverilerigetir extends testAutomations.TestBase {
     private String baseUrl;
     private boolean acceptNextAlert = true;
 
     @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/button[7]")
     public WebElement digerAraclarBtn;
 
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[8]/button[2]")
-    public WebElement mesafeAnalizAraci;
+    @FindBy(xpath = "//button[@id='btnAlandakiVerileriGetir']")
+    public WebElement alandakiVerileriGetir;
 
-
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/button[4]/i[1]")
-    public WebElement cizimAraclariBtn;
-
-    @FindBy(xpath = "//button[@id='btnAlanEkle']")
-    public WebElement alanEkleBtn;
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]")
+    public WebElement alanCiz;
 
     @FindBy(id = "map")
     public WebElement haritayatikla;
@@ -43,20 +39,19 @@ public class Mesafeanalizaraci extends testAutomations.TestBase {
     @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/span[3]")
     public WebElement mevcutdgbh;
 
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]")
-    public WebElement ekrandanSecim;
 
-    @FindBy(xpath = "//label[contains(text(),'Uzunlukları Haritada Göster')]")
-    public WebElement uzunluklariHaritadaGoster;
 
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/input[1]")
-    public WebElement mesafeGiriniz;
-
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[5]/div[1]/button[1]")
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[4]/div[1]")
     public WebElement uygula;
 
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[6]/div[2]/div[1]/button[1]")
-    public WebElement excel;
+//    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[6]/div[2]/div[1]/button[1]")
+//    public WebElement excel;
+
+//    @FindBy(xpath = "//label[contains(text(),'Nokta')]")
+//    public WebElement nokta;
+
+
+
 
 
 
@@ -64,7 +59,7 @@ public class Mesafeanalizaraci extends testAutomations.TestBase {
 
 
     @Test
-    public void testMesafeanalizaraci() throws Exception {
+    public void testAlandakiverilerigetir() throws Exception {
         PageFactory.initElements(driver, this);
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -85,12 +80,14 @@ public class Mesafeanalizaraci extends testAutomations.TestBase {
         mevcutdgbh.click();
         Thread.sleep(3000);
 
+        Fwait.until(ExpectedConditions.visibilityOf(digerAraclarBtn));
+        digerAraclarBtn.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(cizimAraclariBtn));
-        cizimAraclariBtn.click();
+        Fwait.until(ExpectedConditions.visibilityOf(alandakiVerileriGetir));
+        alandakiVerileriGetir.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(alanEkleBtn));
-        alanEkleBtn.click();
+        Fwait.until(ExpectedConditions.visibilityOf(alanCiz));
+        alanCiz.click();
 
         Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
         haritayatikla.click();
@@ -111,48 +108,12 @@ public class Mesafeanalizaraci extends testAutomations.TestBase {
         builder3.doubleClick().perform();
 
 
-
-
-
-
-        Fwait.until(ExpectedConditions.visibilityOf(metinadiimlec));
-        metinadiimlec.click();
-        metinadiimlec.sendKeys("Mesafeanalizaracı");
-
-
-
-
-
-        Fwait.until(ExpectedConditions.visibilityOf(digerAraclarBtn));
-        digerAraclarBtn.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(mesafeAnalizAraci));
-        mesafeAnalizAraci.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(ekrandanSecim));
-        ekrandanSecim.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
-        haritayatikla.click();
-
-
-        Fwait.until(ExpectedConditions.visibilityOf(uzunluklariHaritadaGoster));
-        uzunluklariHaritadaGoster.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(mesafeGiriniz));
-        mesafeGiriniz.click();
-        mesafeGiriniz.sendKeys("50000");
-
         Fwait.until(ExpectedConditions.visibilityOf(uygula));
         uygula.click();
         Thread.sleep(3000);
 
-        Fwait.until(ExpectedConditions.visibilityOf(excel));
-        excel.click();
-
-
-
-
+//        Fwait.until(ExpectedConditions.visibilityOf(nokta));
+//        nokta.click();
 
 
 

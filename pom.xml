@@ -117,7 +117,7 @@
 
 
 <!--                        Yazılmış olan tüm classları çalıştırmak için-->
-                        <include>*/seleniumTests/*.java</include>
+                        <include>*/seleniumTests/*/.java</include>
 
                     </includes>
                 </configuration>

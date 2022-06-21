@@ -1,4 +1,4 @@
-package testAutomations.seleniumTests;
+package testAutomations;
 
 import org.junit.Assert;
 import org.junit.Test;

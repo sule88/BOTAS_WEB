@@ -1,4 +1,4 @@
-package testAutomations.seleniumTests;
+package testAutomations;
 
 import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;

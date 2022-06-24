@@ -72,10 +72,12 @@ public class Idarisinirpafta extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(ilSeciniz));
         ilSeciniz.click();
         Logger.info("İlSeçiniz butonu tıklandı");
+        Thread.sleep(3000);
 
         Fwait.until(ExpectedConditions.visibilityOf(ilsecimi));
         ilsecimi.click();
         Logger.info("İlSeçimi yapıldı.");
+        Thread.sleep(3000);
 
 
 
@@ -87,14 +89,17 @@ public class Idarisinirpafta extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(ilceSecimi));
         ilceSecimi.click();
         Logger.info("İlceSeçimi yapıldı.");
+        Thread.sleep(3000);
 
         Fwait.until(ExpectedConditions.visibilityOf(mahalleseciniz));
         mahalleseciniz.click();
         Logger.info("Mahalle seçiniz butonu tıklandı.");
+        Thread.sleep(3000);
 
         Fwait.until(ExpectedConditions.visibilityOf(mahallesecimi));
         mahallesecimi.click();
         Logger.info("Mahalle seçimi yapıldı.");
+        Thread.sleep(3000);
 
         Fwait.until(ExpectedConditions.visibilityOf(paftasecimi));
         paftasecimi.click();

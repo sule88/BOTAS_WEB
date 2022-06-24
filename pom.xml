@@ -112,13 +112,13 @@
 <!--                        <include>*/seleniumTests/AramaYap/Idarisinirpafta.java</include>-->
 <!--                        <include>*/seleniumTests/AramaYap/TC_hatArama.java</include>-->
 
-                        <include>*/seleniumTests/CizimAraclariAlanEkle/AlanEkleNesneyeKaydet.java</include>
+<!--                        <include>*/seleniumTests/CizimAraclariAlanEkle/AlanEkleNesneyeKaydet.java</include>-->
 <!--                        <include>*/seleniumTests/CizimAraclariAlanEkle/AlanEkleYeniNesneOlarakKaydet.java</include>-->
 <!--                        <include>*/seleniumTests/CizimAraclariAlanEkle/AlanEkleDüzenlemePaneliİslemler.java</include>-->
 
 
 <!--                        <include>*/seleniumTests/DigerAraclar/GörünürAlandakiVeriler.java</include>-->
-                        <include>*/seleniumTests/DigerAraclar/Mesafeanalizaraci.java</include>
+<!--                        <include>*/seleniumTests/DigerAraclar/Mesafeanalizaraci.java</include>-->
 <!--                        <include>*/seleniumTests/CizimAraclariMetinEkle/MetinEkleDüzenlemePaneliindir.java</include>-->
 
 
@@ -141,7 +141,7 @@
 
 
 <!--                        Yazılmış olan tüm classları çalıştırmak için-->
-<!--                        <include>*/seleniumTests/*/*.java</include>-->
+                        <include>*/seleniumTests/*/*.java</include>
 
                     </includes>
                 </configuration>

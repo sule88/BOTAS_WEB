@@ -23,14 +23,26 @@ public class DxfYukleme extends testAutomations.TestBase {
     @FindBy(xpath = "//label[contains(text(),'Gözat')]")
     public WebElement gozat;
 
-    @FindBy(xpath = "//div[contains(text(),'Projeksiyon Seçiniz')]")
-    public WebElement projeksiyonSeciniz;
+//    @FindBy(xpath = "//div[contains(text(),'Projeksiyon Seçiniz')]")
+//    public WebElement projeksiyonSeciniz;
+////
+//    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]")
+//    public WebElement dereceninOndalıgı;
 
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]")
-    public WebElement dereceninOndalıgı;
+
+    @FindBy(id = "file")
+    public WebElement upload_file;
 
 
+//
+//    WebElement upload_file = driver.findElement(By.id("file"));
 
+//    @FindBy(xpath = "//label[contains(text(),'Gözat')]")
+//    public WebElement ;
+
+
+//
+//    WebElement upload_file = driver.findElement(By.xpath("//input[@id='file_up']"));
 
 
 
@@ -58,12 +70,34 @@ public class DxfYukleme extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(dxfYukleme));
         dxfYukleme.click();
 
-
         Fwait.until(ExpectedConditions.visibilityOf(gozat));
         gozat.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(projeksiyonSeciniz));
-        projeksiyonSeciniz.click();
+//        Fwait.until(ExpectedConditions.visibilityOf(gozat));
+//        gozat.click();
+
+//
+
+
+
+
+//
+//        upload_file.sendKeys("C:/Users/sule.hasdeniz/Downloads");
+
+//
+//
+//        Fwait.until(ExpectedConditions.visibilityOf(projeksiyonSeciniz));
+//        projeksiyonSeciniz.click();
+
+
+
+        upload_file.sendKeys("C:Users/sule.hasdeniz/Downloads");
+
+
+
+
+
+
 
 
 

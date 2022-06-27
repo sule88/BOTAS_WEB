@@ -46,10 +46,13 @@ public class BoruYakala extends testAutomations.TestBase {
     @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/button[10]")
     public WebElement boruYakala;
 
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]")
-    public WebElement yakinlastir;
+
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[4]/div[3]/div[1]/div[2]/div[5]/span[1]")
+    public WebElement istenenolcek;
 
 
+    @FindBy(css = "#root > div > div:nth-child(3) > div.bottomSide > div.bottom-scale > div > div.divider.text")
+    public WebElement olcek;
 
 
 
@@ -81,62 +84,12 @@ public class BoruYakala extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
         haritayatikla.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
+        Fwait.until(ExpectedConditions.visibilityOf(olcek));
+        olcek.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(yakinlastir));
-        yakinlastir.click();
-
-
-
-
-
-
+        Fwait.until(ExpectedConditions.visibilityOf(istenenolcek));
+        istenenolcek.click();
 
 
 
@@ -145,70 +98,11 @@ public class BoruYakala extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(cizimAraclariBtn));
         cizimAraclariBtn.click();
 
-
-
         Fwait.until(ExpectedConditions.visibilityOf(boruYakala));
         boruYakala.click();
-
-//
-//        Fwait.until(ExpectedConditions.visibilityOf(cizgiEkleBtn));
-//        cizgiEkleBtn.click();
+        Thread.sleep(5000);
 
 
-
-
-
-
-
-
-        Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
-        haritayatikla.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
-        haritayatikla.click();
-
-
-        Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
-        haritayatikla.click();
-
-
-        Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
-        haritayatikla.click();
-
-
-        Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
-        haritayatikla.click();
-
-
-        Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
-        haritayatikla.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
-        haritayatikla.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
-        haritayatikla.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
-        haritayatikla.click();
-
-
-
-
-//        Fwait.until(ExpectedConditions.visibilityOf(cizgiEkleBtn));
-//        cizgiEkleBtn.click();
-
-//
-//        Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
-//        haritayatikla.click();
-
-
-
-//        Fwait.until(ExpectedConditions.visibilityOf(cizim));
-//        cizim.click();
-//
-//        Fwait.until(ExpectedConditions.visibilityOf(cizim));
-//        cizim.click();
 
 
 

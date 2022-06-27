@@ -30,19 +30,15 @@ public class DxfYukleme extends testAutomations.TestBase {
 //    public WebElement dereceninOndalıgı;
 
 
-    @FindBy(id = "file")
-    public WebElement upload_file;
+    @FindBy(id = "map")
+    public WebElement map;
 
 
-//
-//    WebElement upload_file = driver.findElement(By.id("file"));
-
-//    @FindBy(xpath = "//label[contains(text(),'Gözat')]")
-//    public WebElement ;
 
 
-//
-//    WebElement upload_file = driver.findElement(By.xpath("//input[@id='file_up']"));
+
+
+
 
 
 
@@ -72,41 +68,23 @@ public class DxfYukleme extends testAutomations.TestBase {
 
         Fwait.until(ExpectedConditions.visibilityOf(gozat));
         gozat.click();
+//        gozat.sendKeys("C:Users/sule.hasdeniz/Downloads");
 
-//        Fwait.until(ExpectedConditions.visibilityOf(gozat));
-//        gozat.click();
 
+        gozat.sendKeys("C:/Users/sule.hasdeniz/Downloads"); //Uploading the file using sendKeys
+
+//        WebElement upload_file = driver.findElement(By.xpath("//input[@id='file_up']"));
+//
+//        upload_file.sendKeys("C:Users/sule.hasdeniz/Downloads");
 //
 
 
 
 
-//
-//        upload_file.sendKeys("C:/Users/sule.hasdeniz/Downloads");
-
-//
-//
-//        Fwait.until(ExpectedConditions.visibilityOf(projeksiyonSeciniz));
-//        projeksiyonSeciniz.click();
-
-
-
-        upload_file.sendKeys("C:Users/sule.hasdeniz/Downloads");
 
 
 
 
-
-
-
-
-
-
-
-
-//
-//        WebElement addFile = driver.findElement(By.xpath(".//input[@type='file']"));
-//        addFile.sendKeys("/Users/neeraj.kumar/Desktop/c1.jpeg");
 
 
 
@@ -119,7 +97,7 @@ public class DxfYukleme extends testAutomations.TestBase {
         String bodyText = driver.findElement(By.tagName("body")).getText();
         // Assert.assertTrue("Text not found!", bodyText.contains("Mevcut Boru Hatları"));
 
-
+        System.out.println("File is Uploaded Successfully");
 
 
         System.out.println("Test Tamamlandı!");

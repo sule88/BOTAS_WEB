@@ -87,7 +87,7 @@ public class CizimDüzenle extends testAutomations.TestBase {
         haritayatikla.click();
 
 
-        builder1.moveByOffset(500,200);
+        builder1.moveByOffset(300,100);
         builder1.doubleClick().perform();
         Thread.sleep(3000);
 

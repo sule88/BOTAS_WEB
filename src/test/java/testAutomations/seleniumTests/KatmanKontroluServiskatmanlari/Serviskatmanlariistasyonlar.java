@@ -44,9 +44,21 @@ public class Serviskatmanlariistasyonlar extends testAutomations.TestBase {
             Logger.warn("Kullanıcı login olamadı.");
         }
 
-        Fwait.until(ExpectedConditions.visibilityOf(katmanKontroluBtn));
-        Thread.sleep(1000);
-        katmanKontroluBtn.click();
+
+
+        try {
+
+            Fwait.until(ExpectedConditions.visibilityOf(katmanKontroluBtn));
+            Thread.sleep(1000);
+            katmanKontroluBtn.click();
+        }catch (Exception e){
+
+            Logger.warn("Katman kontrol butonu tıklanmadı.");
+        }
+
+
+
+
 
         Fwait.until(ExpectedConditions.visibilityOf(sekmeAcBtn2));
         sekmeAcBtn2.click();

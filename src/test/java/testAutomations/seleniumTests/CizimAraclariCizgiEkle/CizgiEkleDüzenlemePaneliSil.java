@@ -85,8 +85,12 @@ public class CizgiEkleDüzenlemePaneliSil extends testAutomations.TestBase {
     @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[2]/div[1]/button[1]")
     public WebElement silBtn;
 
-    @FindBy(xpath = "//body/div[7]/div[1]/div[2]/div[1]/button[2]/i[1]")
-    public WebElement iptalBtn;
+    @FindBy(css = "body > div.ui.page.modals.dimmer.transition.visible.active > div > div.actions > div > button.ui.green.button > i")
+    public WebElement silyesilBtn;
+
+
+//    @FindBy(xpath = "//body/div[7]/div[1]/div[2]/div[1]/button[2]/i[1]")
+//    public WebElement iptalBtn;
 
 
 
@@ -209,9 +213,14 @@ public class CizgiEkleDüzenlemePaneliSil extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(silBtn));
         silBtn.click();
 
+        Fwait.until(ExpectedConditions.visibilityOf(silyesilBtn));
+        silyesilBtn.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(iptalBtn));
-        iptalBtn.click();
+
+
+
+//        Fwait.until(ExpectedConditions.visibilityOf(iptalBtn));
+//        iptalBtn.click();
 
 
 

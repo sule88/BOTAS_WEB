@@ -51,12 +51,12 @@ public class AlanOlcmeAraci extends testAutomations.TestBase {
         haritayatikla.click();
 
         Actions builder1 = new Actions(driver);
-        builder1.moveToElement(haritayatikla).clickAndHold().moveByOffset(100, 0).release().perform();
+        builder1.moveToElement(haritayatikla).clickAndHold().moveByOffset(300, 0).release().perform();
         builder1.click().perform();
 
 
         Actions builder2 = new Actions(driver);
-        builder2.moveToElement(haritayatikla).clickAndHold().moveByOffset(0, 50).release().perform();
+        builder2.moveToElement(haritayatikla).clickAndHold().moveByOffset(0, 300).release().perform();
         builder2.doubleClick().perform();
 
 

@@ -1,6 +1,8 @@
 package testAutomations.seleniumTests.KatmanKontroluServiskatmanlari;
 
+import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,16 +20,17 @@ public class Serviskatmanlariistasyonlar extends testAutomations.TestBase {
     @FindBy(css = "#root > div > div:nth-child(3) > div.tool-menu > div:nth-child(5) > div > div > div.layers-section > div > div > div.ui.bottom.attached.segment.active.tab > div > div > div.rc-tree-list > div > div > div > div.rc-tree-treenode.rc-tree-treenode-switcher-close.rc-tree-treenode-leaf-last > span.rc-tree-switcher.rc-tree-switcher_close")
     public WebElement sekmeAcBtn2;
 
-    @FindBy(css = "#root > div > div:nth-child(3) > div.tool-menu > div:nth-child(5) > div > div > div.layers-section > div > div > div.ui.bottom.attached.segment.active.tab > div > div > div.rc-tree-list > div > div > div > div.rc-tree-treenode.rc-tree-treenode-switcher-open.rc-tree-treenode-selected.rc-tree-treenode-leaf-last > span.rc-tree-checkbox")
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/span[3]")
     public WebElement istasyonlarBtn;
 
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/button[2]/i[1]")
+    public WebElement bilgiAl;
 
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[1]")
+    public  WebElement bilgiAlPencere;
 
-
-//
-//    @FindBy(css ="#root > div > div:nth-child(3) > div.tool-menu > div:nth-child(5) > div > div > div.layers-section > div > div > div.ui.bottom.attached.segment.active.tab > div > div > div.rc-tree-list > div > div > div > div:nth-child(9) > span.rc-tree-checkbox")
-//    public WebElement istasyonlarBtn;
-
+    @FindBy(id = ("map"))
+    public  WebElement harita;
 
 
     @Test
@@ -42,6 +45,7 @@ public class Serviskatmanlariistasyonlar extends testAutomations.TestBase {
         }
 
         Fwait.until(ExpectedConditions.visibilityOf(katmanKontroluBtn));
+        Thread.sleep(1000);
         katmanKontroluBtn.click();
 
         Fwait.until(ExpectedConditions.visibilityOf(sekmeAcBtn2));
@@ -52,8 +56,13 @@ public class Serviskatmanlariistasyonlar extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(istasyonlarBtn));
         istasyonlarBtn.click();
         Thread.sleep(3000);
+        bilgiAl.click();
+        Thread.sleep(1000);
+        harita.click();
+        Fwait.until(ExpectedConditions.visibilityOf(bilgiAlPencere));
 
-
+        String bodyText = bilgiAlPencere.getText();
+        Assert.assertTrue("Text not found!", bodyText.contains("tesis"));
 
 
         System.out.println("Test Tamamlandı!");

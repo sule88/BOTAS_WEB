@@ -120,6 +120,7 @@
 <!--                        <include>*/seleniumTests/DigerAraclar/GörünürAlandakiVeriler.java</include>-->
 <!--                        <include>*/seleniumTests/DigerAraclar/Mesafeanalizaraci.java</include>-->
 <!--                        <include>*/seleniumTests/CizimAraclariMetinEkle/MetinEkleDüzenlemePaneliindir.java</include>-->
+                        <include>*/seleniumTests/OlcumAraclari/AlanOlcmeAraci.java</include>-->
 
 
 
@@ -140,8 +141,10 @@
 
 
 
-<!--                        Yazılmış olan tüm classları çalıştırmak için-->
-                        <include>*/seleniumTests/*/*.java</include>
+
+
+                        <!--                        Yazılmış olan tüm classları çalıştırmak için-->
+<!--                        <include>*/seleniumTests/*/*.java</include>-->
 
                     </includes>
                 </configuration>

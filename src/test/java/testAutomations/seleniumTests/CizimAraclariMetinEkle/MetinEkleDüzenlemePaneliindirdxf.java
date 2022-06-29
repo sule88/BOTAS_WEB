@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import testAutomations.Kullanici;
 
-public class MetinEkleDüzenlemePaneliindir extends testAutomations.TestBase {
+public class MetinEkleDüzenlemePaneliindirdxf extends testAutomations.TestBase {
     private String baseUrl;
     private boolean acceptNextAlert = true;
 
@@ -32,8 +32,6 @@ public class MetinEkleDüzenlemePaneliindir extends testAutomations.TestBase {
 
     @FindBy(xpath = "//input[@id='editor-fill']")
     public WebElement yaziRengiBtn;
-
-
 
 
     @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[14]/div[1]")
@@ -66,22 +64,24 @@ public class MetinEkleDüzenlemePaneliindir extends testAutomations.TestBase {
     public WebElement yaziDondurBtn;
 
 
-
-
     @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[2]/div[1]/div[3]")
     public WebElement indirBtn;
 
-    @FindBy(xpath = "//span[contains(text(),'DGN')]")
-    public WebElement dgnBtn;
+    @FindBy(xpath = "//span[contains(text(),'DXF')]")
+    public WebElement dxfBtn;
 
-    @FindBy(css = "$(/'#modal-content-text > div > i/')")
+    @FindBy(css = "#modal-content-text > div > div.divider.default.text")
     public WebElement projeksiyonSecimi;
 
-    @FindBy(xpath= "//body/div[7]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/span[1]")
+    @FindBy(css= "#modal-content-text > div > div.visible.menu.transition > div.selected.item")
     public WebElement dereceninOndaligi;
 
-    @FindBy(css = "(body > div.ui.page.modals.dimmer.transition.visible.active > div > div.actions > div > button:nth-child(1))")
+    @FindBy(xpath = "//button[contains(text(),'Dosyayı İndir')]")
     public WebElement dosyaindir;
+
+
+
+
 
 
 
@@ -109,7 +109,7 @@ public class MetinEkleDüzenlemePaneliindir extends testAutomations.TestBase {
 
 
     @Test
-    public void testMetinEkleDüzenlemePaneliindir() throws Exception {
+    public void testMetinEkleDüzenlemePaneliindirdxf() throws Exception {
         PageFactory.initElements(driver, this);
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -189,14 +189,15 @@ public class MetinEkleDüzenlemePaneliindir extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(indirBtn));
         indirBtn.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(dgnBtn));
-        dgnBtn.click();
+        Fwait.until(ExpectedConditions.visibilityOf(dxfBtn));
+        dxfBtn.click();
 
 
 
         Fwait.until(ExpectedConditions.visibilityOf(projeksiyonSecimi));
         projeksiyonSecimi.click();
-        projeksiyonSecimi.sendKeys(Keys.ENTER);
+//        projeksiyonSecimi.sendKeys(Keys.ENTER);
+        Thread.sleep(3000);
 
 
         Fwait.until(ExpectedConditions.visibilityOf(dereceninOndaligi));
@@ -205,6 +206,7 @@ public class MetinEkleDüzenlemePaneliindir extends testAutomations.TestBase {
 
         Fwait.until(ExpectedConditions.visibilityOf(dosyaindir));
         dosyaindir.click();
+
 
 
 

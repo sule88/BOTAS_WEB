@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import testAutomations.Kullanici;
 
-public class MetinEkleNesneyeKaydetiptal extends testAutomations.TestBase {
+public class MetinEkleDüzenlemePaneliindirshp extends testAutomations.TestBase {
     private String baseUrl;
     private boolean acceptNextAlert = true;
 
@@ -32,7 +32,6 @@ public class MetinEkleNesneyeKaydetiptal extends testAutomations.TestBase {
 
     @FindBy(xpath = "//input[@id='editor-fill']")
     public WebElement yaziRengiBtn;
-
 
 
     @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[14]/div[1]")
@@ -63,34 +62,54 @@ public class MetinEkleNesneyeKaydetiptal extends testAutomations.TestBase {
 
     @FindBy(xpath = "//input[@id='editor-rotation']")
     public WebElement yaziDondurBtn;
+
+
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[2]/div[1]/div[3]")
+    public WebElement indirBtn;
+
+    @FindBy(xpath = "//span[contains(text(),'SHP')]")
+    public WebElement shpBtn;
+
+    @FindBy(css = "#modal-content-text > div > div.divider.default.text")
+    public WebElement projeksiyonSecimi;
+
+    @FindBy(css= "#modal-content-text > div > div.visible.menu.transition > div.selected.item")
+    public WebElement dereceninOndaligi;
+
+    @FindBy(xpath = "//button[contains(text(),'Dosyayı İndir')]")
+    public WebElement dosyaindir;
+
+
+
+
+
+
+
+
+
+
+
+//    @FindBy(xpath = "//span[contains(text(),'DGN')]")
+//    public WebElement dgnBtn;
+
+//    @FindBy(xpath = "//span[contains(text(),'KML')]")
+//    public WebElement kmlBtn;
+
+//    @FindBy(xpath = "//span[contains(text(),'SHP')]")
+//    public WebElement shpBtn;
+
+//    @FindBy(xpath = "//span[contains(text(),'TAB')]")
+//    public WebElement tabBtn;
 //
-//    @FindBy(xpath = "//button[contains(text(),'Koordinata Git')]")
-//    public WebElement koordinataGitBtn;
-
-    @FindBy(xpath = "//div[contains(text(),'Kayıt Tipi')]")
-    public WebElement kayitTipiBtn;
-
-    @FindBy(xpath = "//span[contains(text(),'Nesneye Kaydet')]")
-    public WebElement nesneyeKaydetBtn;
-
-    @FindBy(xpath = "//div[contains(text(),'Nesne seçimi')]")
-    public WebElement nesneSecimi;
-
-    @FindBy(xpath = "//div[@id='901']")
-    public WebElement varOlanNesneSecimi;
-
-    @FindBy(css = "body > div.ui.page.modals.dimmer.transition.visible.active > div > div.actions > div > button.ui.red.button")
-    public WebElement nesneyeKaydetiptal;
-
-
-
+//    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[5]/div[1]/div[2]/div[1]/button[1]")
+//    public WebElement silBtn;
 
 
 
 
 
     @Test
-    public void testMetinEkleNesneyeKaydetiptal() throws Exception {
+    public void testMetinEkleDüzenlemePaneliindirshp() throws Exception {
         PageFactory.initElements(driver, this);
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -166,21 +185,66 @@ public class MetinEkleNesneyeKaydetiptal extends testAutomations.TestBase {
         Thread.sleep(2000);
 
 
-        Fwait.until(ExpectedConditions.visibilityOf(kayitTipiBtn));
-        kayitTipiBtn.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(nesneyeKaydetBtn));
-        nesneyeKaydetBtn.click();
+        Fwait.until(ExpectedConditions.visibilityOf(indirBtn));
+        indirBtn.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(nesneSecimi));
-        nesneSecimi.click();
+        Fwait.until(ExpectedConditions.visibilityOf(shpBtn));
+        shpBtn.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(varOlanNesneSecimi));
-        varOlanNesneSecimi.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(nesneyeKaydetiptal));
-        nesneyeKaydetiptal.click();
-        Thread.sleep(5000);
+
+        Fwait.until(ExpectedConditions.visibilityOf(projeksiyonSecimi));
+        projeksiyonSecimi.click();
+//        projeksiyonSecimi.sendKeys(Keys.ENTER);
+        Thread.sleep(3000);
+
+
+        Fwait.until(ExpectedConditions.visibilityOf(dereceninOndaligi));
+        dereceninOndaligi.click();
+
+
+        Fwait.until(ExpectedConditions.visibilityOf(dosyaindir));
+        dosyaindir.click();
+
+
+
+
+
+
+
+
+//        Fwait.until(ExpectedConditions.visibilityOf(dgnBtn));
+//        dgnBtn.click();
+//
+//        Fwait.until(ExpectedConditions.visibilityOf(kmlBtn));
+//        kmlBtn.click();
+//
+//        Fwait.until(ExpectedConditions.visibilityOf(shpBtn));
+//        shpBtn.click();
+//
+//        Fwait.until(ExpectedConditions.visibilityOf(tabBtn));
+//        tabBtn.click();
+//
+//        Fwait.until(ExpectedConditions.visibilityOf(silBtn));
+//        silBtn.click();
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

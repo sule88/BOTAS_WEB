@@ -107,8 +107,11 @@ public class AlanEkleDüzenlemePaneliİslemler extends testAutomations.TestBase 
     @FindBy(xpath = "//span[contains(text(),'Sıfırla')]")
     public WebElement sifirla;
 
-    @FindBy(xpath = "//body/div[5]")
+    @FindBy(css = "body > div.ui.page.modals.dimmer.transition.visible.active > div > div.actions > div > button.ui.red.button > i")
     public WebElement iptal;
+
+    @FindBy(css = "body > div.ui.page.modals.dimmer.transition.visible.active > div > div.actions > div > button.ui.green.button > i")
+    public WebElement sil;
 
 
 
@@ -305,9 +308,10 @@ public class AlanEkleDüzenlemePaneliİslemler extends testAutomations.TestBase 
 
         Fwait.until(ExpectedConditions.visibilityOf(sifirla));
         sifirla.click();
+        Thread.sleep(3000);
 
-        Fwait.until(ExpectedConditions.visibilityOf(iptal));
-        iptal.click();
+        Fwait.until(ExpectedConditions.visibilityOf(sil));
+        sil.click();
         Thread.sleep(2000);
 
         Thread.sleep(3000);

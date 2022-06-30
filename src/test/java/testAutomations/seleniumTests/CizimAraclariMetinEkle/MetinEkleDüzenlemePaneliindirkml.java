@@ -191,25 +191,25 @@ public class MetinEkleDüzenlemePaneliindirkml extends testAutomations.TestBase 
 
         Fwait.until(ExpectedConditions.visibilityOf(kmlBtn));
         kmlBtn.click();
-
-         try {
-
-          Fwait.until(ExpectedConditions.visibilityOf(projeksiyonSecimi));
-           projeksiyonSecimi.click();
-         }catch (Exception e){
-             Logger.warn("Projeksiyon seçimi yapılamadı.");
-         }
-
-        Thread.sleep(3000);
-
-
-
-        Fwait.until(ExpectedConditions.visibilityOf(dereceninOndaligi));
-        dereceninOndaligi.click();
+//
+//         try {
+//
+//          Fwait.until(ExpectedConditions.visibilityOf(projeksiyonSecimi));
+//           projeksiyonSecimi.click();
+//         }catch (Exception e){
+//             Logger.warn("Projeksiyon seçimi yapılamadı.");
+//         }
+//
+//        Thread.sleep(3000);
 
 
-        Fwait.until(ExpectedConditions.visibilityOf(dosyaindir));
-        dosyaindir.click();
+//
+//        Fwait.until(ExpectedConditions.visibilityOf(dereceninOndaligi));
+//        dereceninOndaligi.click();
+
+//
+//        Fwait.until(ExpectedConditions.visibilityOf(dosyaindir));
+//        dosyaindir.click();
 
 
 

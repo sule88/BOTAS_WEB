@@ -3,6 +3,7 @@ package testAutomations.seleniumTests.Gerceklesenacildurumlar;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -26,6 +27,11 @@ public class acildurumpaneli extends testAutomations.TestBase {
 
     @FindBy(xpath ="//span[contains(text(),'Deprem')]")
     public WebElement deprem;
+
+
+    @FindBy(css ="#jsPanel-5-node > div > div > div > div:nth-child(2) > div > button")
+    public WebElement listele;
+
 
 
 
@@ -72,11 +78,27 @@ public class acildurumpaneli extends testAutomations.TestBase {
 
         try {
             gunlukveriBtn.click();
+            gunlukveriBtn.sendKeys(Keys.ENTER);
         } catch (Exception e) {
             Logger.warn("Günlük veri miktarı seçilemedi.");
         }
 
-//
+
+
+        try {
+            listele.click();
+        } catch (Exception e) {
+            Logger.warn("Veriler listelenmedi.");
+        }
+
+        Thread.sleep(3000);
+
+
+
+
+
+
+
 
 
 

@@ -9,6 +9,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions; //3. olarak kontrol edilecek yer. İmport eklenmiş olmalı, bunu kontrol ediyoruz.
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.slf4j.Logger;
@@ -19,6 +20,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Vector;
 
 
 /**
@@ -32,7 +34,7 @@ public class TestBase extends TestCase {
 
     protected static WebDriver driver;
     protected static FluentWait<WebDriver> Fwait;
-
+    protected static Actions actions; //1. eklenecek yer.
     protected  static long randomLong = ((long)((Math.random() * 1000)+1000));
     protected static final String SERVIS_ADRESI = "https://live.basarsoft.com.tr/botas/web/#/login";
     protected String servisAdresi = SERVIS_ADRESI;
@@ -40,6 +42,7 @@ public class TestBase extends TestCase {
     protected JavascriptExecutor scroll;
     protected StringBuffer verificationErrors = new StringBuffer();
     ChromeOptions options = new ChromeOptions();
+
 
 
 
@@ -56,6 +59,7 @@ public class TestBase extends TestCase {
             driver = new ChromeDriver();
         }
         Logger.info("setUp(servisAdresi=" + servisAdresi + ").");
+        actions = new Actions(driver); //2. eklenecek yer
         Fwait =
                 new FluentWait<WebDriver>(driver)
                         .withTimeout(Duration.ofSeconds(5))

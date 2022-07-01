@@ -115,9 +115,9 @@ public class Mesafeanalizaraci extends testAutomations.TestBase {
 
 
 
-        Fwait.until(ExpectedConditions.visibilityOf(metinadiimlec));
-        metinadiimlec.click();
-        metinadiimlec.sendKeys("Mesafeanalizaracı");
+//        Fwait.until(ExpectedConditions.visibilityOf(metinadiimlec));
+//        metinadiimlec.click();
+//        metinadiimlec.sendKeys("Mesafeanalizaracı");
 
 
 

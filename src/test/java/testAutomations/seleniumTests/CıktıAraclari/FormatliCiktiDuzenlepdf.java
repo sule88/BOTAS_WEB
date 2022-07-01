@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import testAutomations.Kullanici;
 
 
-public class FormatliCiktiDuzenle extends testAutomations.TestBase {
+public class FormatliCiktiDuzenlepdf extends testAutomations.TestBase {
     private String baseUrl;
     private boolean acceptNextAlert = true;
 
@@ -31,8 +31,13 @@ public class FormatliCiktiDuzenle extends testAutomations.TestBase {
     @FindBy(css = "body > div.ol-ext-print-dialog.ol-ext-dialog.ol-visible > form > div.ol-content > div.ol-print-param > ul > li:nth-child(9) > label")
     public WebElement opsiyoneletiket;
 
-    @FindBy(xpath = "//body/div[5]/form[1]/div[2]/div[1]/ul[1]/li[10]")
+    @FindBy(xpath = "//body[1]/div[3]/form[1]/div[2]/div[1]/ul[1]/li[10]/select[1]")
     public WebElement farkliKaydet;
+
+    @FindBy(xpath = "//body/div[3]/form[1]/div[2]/div[1]/ul[1]/li[10]/select[1]/option[5]")
+    public WebElement pdf;
+
+
 
 
 
@@ -76,6 +81,13 @@ public class FormatliCiktiDuzenle extends testAutomations.TestBase {
 
         Fwait.until(ExpectedConditions.visibilityOf(farkliKaydet));
         farkliKaydet.click();
+//        farkliKaydet.sendKeys(Keys.DOWN);
+//        farkliKaydet.sendKeys(Keys.ENTER);
+
+        Fwait.until(ExpectedConditions.visibilityOf(pdf));
+        pdf.click();
+
+
 
 
 

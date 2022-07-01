@@ -79,7 +79,7 @@ public class MetinEkleNesneyeKaydetiptal extends testAutomations.TestBase {
     @FindBy(xpath = "//div[@id='901']")
     public WebElement varOlanNesneSecimi;
 
-    @FindBy(xpath = "//body/div[5]/div[1]/div[3]/div[1]/button[2]")
+    @FindBy(css = "body > div.ui.page.modals.dimmer.transition.visible.active > div > div.actions > div > button.ui.red.button")
     public WebElement nesneyeKaydetiptal;
 
 
@@ -180,7 +180,7 @@ public class MetinEkleNesneyeKaydetiptal extends testAutomations.TestBase {
 
         Fwait.until(ExpectedConditions.visibilityOf(nesneyeKaydetiptal));
         nesneyeKaydetiptal.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
 
 

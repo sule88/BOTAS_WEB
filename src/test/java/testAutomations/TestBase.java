@@ -57,7 +57,7 @@ public class TestBase extends TestCase {
         Logger.info("setUp(servisAdresi=" + servisAdresi + ").");
         Fwait =
                 new FluentWait<WebDriver>(driver)
-                        .withTimeout(Duration.ofSeconds(10))
+                        .withTimeout(Duration.ofSeconds(5))
                         .pollingEvery(Duration.ofSeconds(1))
                         .ignoring(NoSuchElementException.class);
         scroll = (JavascriptExecutor) driver;

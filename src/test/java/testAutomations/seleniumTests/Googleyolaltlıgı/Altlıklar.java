@@ -39,23 +39,40 @@ public class Altlıklar extends testAutomations.TestBase {
     @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[2]/div[1]/div[3]/div[1]")
     public WebElement Googlefizikseletiketsiz;
 
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[2]/div[1]/div[3]/div[2]/img[1]")
+    public WebElement GoogleOsm;
+
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[2]/div[1]/div[3]/div[3]")
+    public WebElement GoogleOsmetiketsiz;
+
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[2]/div[1]/div[4]/div[1]")
+    public WebElement Bingyolaltligi;
+
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[2]/div[1]/div[4]/div[2]")
+    public WebElement Binguydualtligi;
+
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[2]/div[1]/div[4]/div[3]")
+    public WebElement Binghibrit;
+
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[2]/div[1]/div[5]/div[1]")
+    public WebElement Hgmuydu;
+
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[2]/div[1]/div[5]/div[2]")
+    public WebElement Hgmuyduetiketsiz;
+
+
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[2]/div[1]/div[5]/div[3]/img[1]")
+    public WebElement HgmTile;
 
 
 
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[2]/div[1]/div[6]/div[1]")
+    public WebElement Yandexyol;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[3]/div[2]/div[1]/div[6]/div[2]")
+    public WebElement Yandexuydu;
 
 
 
@@ -132,6 +149,81 @@ public class Altlıklar extends testAutomations.TestBase {
         }
 
 
+
+
+        try {
+            GoogleOsm.click();
+        } catch (Exception e) {
+            Logger.warn("Google Osm  butonu tıklanmadı.");
+        }
+
+
+
+        try {
+            GoogleOsmetiketsiz.click();
+        } catch (Exception e) {
+            Logger.warn("Google Osm etiketsiz  butonu tıklanmadı.");
+        }
+
+
+
+
+        try {
+            Bingyolaltligi.click();
+        } catch (Exception e) {
+            Logger.warn("Bing yol altlıgı  butonu tıklanmadı.");
+        }
+
+
+        try {
+            Binguydualtligi.click();
+        } catch (Exception e) {
+            Logger.warn("Bing uydu altlıgı  butonu tıklanmadı.");
+        }
+
+
+
+        try {
+            Binghibrit.click();
+        } catch (Exception e) {
+            Logger.warn("Bing hibrit  butonu tıklanmadı.");
+        }
+
+        try {
+           Hgmuydu.click();
+        } catch (Exception e) {
+            Logger.warn("Hgm uydu butonu tıklanmadı.");
+        }
+
+
+        try {
+            Hgmuyduetiketsiz.click();
+        } catch (Exception e) {
+            Logger.warn("Hgm uydu etiketsiz tıklanmadı.");
+        }
+
+
+
+        try {
+            HgmTile.click();
+        } catch (Exception e) {
+            Logger.warn("Hgm tile tıklanmadı.");
+        }
+
+
+        try {
+            Yandexyol.click();
+        } catch (Exception e) {
+            Logger.warn("Yandex yol tıklanmadı.");
+        }
+
+
+
+        try {
+            Yandexuydu.click();
+        } catch (Exception e) {
+            Logger.warn("Yandex uydu tıklanmadı.");
+        }
 
 
 

@@ -133,7 +133,13 @@ public class HatUzerindenOlcumYapGoster extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(haritayatikla));
         haritayatikla.click();
 
+        Fwait.until(ExpectedConditions.visibilityOf(noktayibul));
+        noktayibul.click();
 
+
+        Actions builder2 = new Actions(driver);
+        builder2.moveToElement(haritayatikla).clickAndHold().moveByOffset(200, 0).release().perform();
+        builder2.click().perform();
 
 
 

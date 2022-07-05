@@ -28,9 +28,35 @@ public class KullaniciEkle extends testAutomations.TestBase {
     public WebElement kullanıcıEkleButonu;
 
 
-    @FindBy(xpath = "//body/div[10]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]")
+    @FindBy(xpath = "//body/div[7]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]")
     public WebElement İsimtext;
 
+    @FindBy(xpath = "//body/div[7]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/input[1]")
+    public WebElement Soyisimtext;
+
+
+    @FindBy(xpath = "//body/div[7]/div[1]/div[2]/div[2]/div[1]/div[4]/div[1]/div[1]/input[1]")
+    public WebElement Kullaniciadi;
+
+    @FindBy(xpath = "//body/div[7]/div[1]/div[2]/div[2]/div[1]/div[5]/div[1]/div[1]/input[1]")
+    public WebElement Telno;
+
+    @FindBy(xpath = "//body/div[7]/div[1]/div[2]/div[2]/div[1]/div[6]/div[1]/div[1]/div[1]/input[1]")
+    public WebElement email;
+
+
+    @FindBy(xpath = "//input[@id='standard-password-input']")
+    public WebElement KullanıcıSifresi;
+
+    @FindBy(xpath = "//a[contains(text(),'Roller')]")
+    public WebElement Roller;
+
+
+    @FindBy(xpath = "//td[contains(text(),'Sistem Kullanıcısı')]")
+    public WebElement Sistemkullanicisi;
+
+    @FindBy(xpath = "//body/div[7]/div[1]/div[3]/button[2]")
+    public WebElement kullaniciyikaydet;
 
 
 
@@ -42,7 +68,7 @@ public class KullaniciEkle extends testAutomations.TestBase {
 
 
     @Test
-    public void testSilEvet() throws Exception {
+    public void testKullaniciEkle() throws Exception {
         PageFactory.initElements(driver, this);
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -68,6 +94,52 @@ public class KullaniciEkle extends testAutomations.TestBase {
 
         Fwait.until(ExpectedConditions.visibilityOf(İsimtext));
         İsimtext.click();
+        İsimtext.sendKeys("Test");
+
+
+        Fwait.until(ExpectedConditions.visibilityOf(Soyisimtext));
+        Soyisimtext.click();
+        Soyisimtext.sendKeys("Testsoyisim");
+
+        Fwait.until(ExpectedConditions.visibilityOf(Kullaniciadi));
+        Kullaniciadi.click();
+        Kullaniciadi.sendKeys("botas");
+
+
+        Fwait.until(ExpectedConditions.visibilityOf(Telno));
+        Telno.click();
+        Telno.sendKeys("5065487521");
+
+        Fwait.until(ExpectedConditions.visibilityOf(email));
+        email.click();
+        email.sendKeys("botas@hotmail.com");
+
+
+        Fwait.until(ExpectedConditions.visibilityOf(KullanıcıSifresi));
+        KullanıcıSifresi.click();
+        KullanıcıSifresi.sendKeys("1234");
+
+        Fwait.until(ExpectedConditions.visibilityOf(Roller));
+        Roller.click();
+
+        Fwait.until(ExpectedConditions.visibilityOf(Sistemkullanicisi));
+        Sistemkullanicisi.click();
+
+        try {
+            Fwait.until(ExpectedConditions.visibilityOf(kullaniciyikaydet));
+        }catch (Exception e){
+            Logger.warn("Kullanıcı kaydedilmedi");
+        }
+        kullaniciyikaydet.click();
+
+
+
+
+
+
+
+
+
 
 
 

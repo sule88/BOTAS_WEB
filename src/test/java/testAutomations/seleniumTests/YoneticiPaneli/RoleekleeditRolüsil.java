@@ -23,7 +23,7 @@ public class RoleekleeditRolüsil extends testAutomations.TestBase {
     @FindBy(xpath = "//span[contains(text(),'Rol İşlemleri')]")
     public WebElement Rolislemleri;
 
-    @FindBy(xpath = "//tbody/tr[2]/td[1]/div[1]/button[1]/span[1]/span[1]")
+    @FindBy(xpath = "//tbody/tr[9]/td[1]/div[1]/button[1]/span[1]/span[1]")
     public WebElement editBtn;
 
 //    @FindBy(xpath = "//body/div[9]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/input[1]")
@@ -33,8 +33,8 @@ public class RoleekleeditRolüsil extends testAutomations.TestBase {
     public WebElement Sistemyetkileri;
 
 
-    @FindBy(css = "body > div.ui.page.modals.dimmer.transition.visible.active > div > div.content > div > div.ui.black.bottom.attached.segment.active.tab > div > div.rc-tree-list > div > div > div > div:nth-child(33) > span.rc-tree-checkbox")
-    public WebElement olcumaraclari;
+//    @FindBy(css = "body > div.ui.page.modals.dimmer.transition.visible.active > div > div.content > div > div.ui.black.bottom.attached.segment.active.tab > div > div.rc-tree-list > div > div > div > div:nth-child(33) > span.rc-tree-checkbox")
+//    public WebElement olcumaraclari;
 
     @FindBy(xpath = "//button[contains(text(),'Rolü Sil')]")
     public WebElement rolüsil;
@@ -76,9 +76,9 @@ public class RoleekleeditRolüsil extends testAutomations.TestBase {
 
         Fwait.until(ExpectedConditions.visibilityOf(Sistemyetkileri));
         Sistemyetkileri.click();
-
-        Fwait.until(ExpectedConditions.visibilityOf(olcumaraclari));
-        olcumaraclari.click();
+//
+//        Fwait.until(ExpectedConditions.visibilityOf(olcumaraclari));
+//        olcumaraclari.click();
 
         Fwait.until(ExpectedConditions.visibilityOf(rolüsil));
         rolüsil.click();

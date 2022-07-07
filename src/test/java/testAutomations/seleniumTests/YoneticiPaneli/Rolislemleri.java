@@ -26,11 +26,11 @@ public class Rolislemleri extends testAutomations.TestBase {
     @FindBy(xpath = "//button[contains(text(),'Rol ekle')]")
     public WebElement Rolekle;
 
-    @FindBy(xpath = "//body/div[9]/div[1]/div[2]/div[1]/div[2]/form[1]")
+    @FindBy(xpath = "//body/div[8]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/input[1]")
     public WebElement roladigirin;
 
-    @FindBy(xpath = "//body/div[9]/div[1]/div[2]/div[1]/div[2]/form[1]/div[2]/input[1]")
-    public WebElement aktif;
+//    @FindBy(xpath = "//body/div[9]/div[1]/div[2]/div[1]/div[2]/form[1]/div[2]/input[1]")
+//    public WebElement aktif;
 
 
 

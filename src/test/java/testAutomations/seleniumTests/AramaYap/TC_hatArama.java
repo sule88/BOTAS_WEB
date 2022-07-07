@@ -40,7 +40,6 @@ public class TC_hatArama extends testAutomations.TestBase {
     public WebElement bilgiAl;
 
 
-
     @FindBy(xpath = "//span[contains(text(),'chevron_right')]")
     public WebElement NesneDetay;
 

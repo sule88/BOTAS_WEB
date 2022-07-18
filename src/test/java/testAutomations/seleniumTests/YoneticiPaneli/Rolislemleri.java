@@ -1,6 +1,8 @@
 package testAutomations.seleniumTests.YoneticiPaneli;
 
+import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,17 +28,20 @@ public class Rolislemleri extends testAutomations.TestBase {
     @FindBy(xpath = "//button[contains(text(),'Rol ekle')]")
     public WebElement Rolekle;
 
-    @FindBy(xpath = "//body/div[8]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/input[1]")
+    @FindBy(css = ("body > div.ui.page.modals.dimmer.transition.visible.active > div > div.content > div > div.ui.black.bottom.attached.segment.active.tab > form > div:nth-child(1) > input"))
     public WebElement roladigirin;
 
-//    @FindBy(xpath = "//body/div[9]/div[1]/div[2]/div[1]/div[2]/form[1]/div[2]/input[1]")
-//    public WebElement aktif;
+//    @FindBy(xpath = "//body/div[8]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/input[1]")
+//    public WebElement roladigirin;
 
+    @FindBy(css = ("body > div.ui.page.modals.dimmer.transition.visible.active > div > div.content > div > div.ui.black.bottom.attached.segment.active.tab > form > div:nth-child(2) > input[type=checkbox]"))
+    public WebElement aktif;
 
+    @FindBy(css = ("body > div.ui.page.modals.dimmer.transition.visible.active > div > div.actions > button.ui.icon.positive.right.labeled.button"))
+    public WebElement Kaydet;
 
-
-
-
+//    @FindBy(id = ("download-frame"))
+//    public WebElement uyarı;
 
 
     @Test
@@ -66,26 +71,24 @@ public class Rolislemleri extends testAutomations.TestBase {
 
         Fwait.until(ExpectedConditions.visibilityOf(roladigirin));
         roladigirin.click();
-        roladigirin.sendKeys("TestAdmin");
-//
-//        Fwait.until(ExpectedConditions.visibilityOf(aktif));
-//        aktif.click();
+        roladigirin.sendKeys("TestAdmin1");
 
+        try {
+        Fwait.until(ExpectedConditions.visibilityOf(aktif));
+        aktif.click();
 
+        } catch (Exception e) {
+            Logger.warn("Aktif edilemedi.");
+        }
 
+        Kaydet.click();
 
+        Fwait.until(ExpectedConditions.visibilityOf(Rolekle));
 
+        Thread.sleep(3000);
 
-
-
-
-
-
-
-
-
-
-        Thread.sleep(30000);
+        String bodyText = driver.findElement(By.cssSelector("#root > div > div.Toastify > div")).getText();
+        Assert.assertTrue("Text not found!", bodyText.contains("Rol başarı ile eklendi."));
 
 
         System.out.println("Test Tamamlandı!");

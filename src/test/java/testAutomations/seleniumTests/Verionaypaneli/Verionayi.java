@@ -1,6 +1,8 @@
 package testAutomations.seleniumTests.Verionaypaneli;
 
+import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -52,6 +54,14 @@ public class Verionayi extends testAutomations.TestBase {
     @FindBy(css =" #root > div > div:nth-child(3) > div.tool-menu > div:nth-child(5) > div > div > div.layers-section > div > div > div.ui.bottom.attached.segment.active.tab > div > div > div.rc-tree-list > div > div > div > div:nth-child(1) > span.rc-tree-checkbox")
     public WebElement botasDogalgazhattiBtn;
 
+     @FindBy(css = "#root > div > div:nth-child(3) > div.tool-menu > div:nth-child(5) > div > div > div.layers-section > div > div > div.ui.bottom.attached.segment.active.tab > div > div > div.rc-tree-list > div > div > div > div.rc-tree-treenode.rc-tree-treenode-switcher-close.rc-tree-treenode-leaf-last > span.rc-tree-checkbox")
+    public WebElement botasIstasyonlar;
+
+    @FindBy(css = ("#jsPanel-1 > div.jsPanel-hdr.jsPanel-hdr-dark > div.jsPanel-headerbar > div.jsPanel-controlbar > button.jsPanel-btn.jsPanel-btn-minimize.jsPanel-btn-md"))
+    public  WebElement gapat;
+
+    @FindBy(xpath = "//body[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[2]")
+    public WebElement info;
 
 
 
@@ -85,18 +95,25 @@ public class Verionayi extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(katmanKontroluBtn));
         katmanKontroluBtn.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(sekmeAcBtn1));
-        sekmeAcBtn1.click();
-        Thread.sleep(3000);
+//        Fwait.until(ExpectedConditions.visibilityOf(sekmeAcBtn1));
+//        sekmeAcBtn1.click();
+//        Thread.sleep(3000);
 
+//
+//        Fwait.until(ExpectedConditions.visibilityOf(botasDogalgazhattiBtn));
+//        botasDogalgazhattiBtn.click();
+//        Thread.sleep(3000);
 
-        Fwait.until(ExpectedConditions.visibilityOf(botasDogalgazhattiBtn));
-        botasDogalgazhattiBtn.click();
+        Fwait.until(ExpectedConditions.visibilityOf(botasIstasyonlar));
+        botasIstasyonlar.click();
         Thread.sleep(3000);
 
 
         Fwait.until(ExpectedConditions.visibilityOf(tumunugorbtn));
         tumunugorbtn.click();
+        Thread.sleep(2000);
+        gapat.click();
+        Thread.sleep(1000);
 
 
         try {
@@ -105,6 +122,12 @@ public class Verionayi extends testAutomations.TestBase {
         } catch (Exception e) {
             Logger.warn("Olimpos hattından bilgi alınamadı..");
         }
+
+        Fwait.until(ExpectedConditions.visibilityOf(info));
+
+
+        String bodyText = driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[2]")).getText();
+        Assert.assertTrue("Text not found!", bodyText.contains("tesis"));
 
         Thread.sleep(3000);
 

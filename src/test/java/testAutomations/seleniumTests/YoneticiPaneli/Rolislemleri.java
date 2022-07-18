@@ -83,12 +83,12 @@ public class Rolislemleri extends testAutomations.TestBase {
 
         Kaydet.click();
 
-//        Fwait.until(ExpectedConditions.visibilityOf(Rolekle));
-//
-//        String bodyText = driver.findElement(By.cssSelector("body")).getText();
-//        Assert.assertTrue("Text not found!", bodyText.contains("Rol başarı ile eklendi."));
+        Fwait.until(ExpectedConditions.visibilityOf(Rolekle));
 
-//        Thread.sleep(30000);
+        Thread.sleep(3000);
+
+        String bodyText = driver.findElement(By.cssSelector("#root > div > div.Toastify > div")).getText();
+        Assert.assertTrue("Text not found!", bodyText.contains("Rol başarı ile eklendi."));
 
 
         System.out.println("Test Tamamlandı!");

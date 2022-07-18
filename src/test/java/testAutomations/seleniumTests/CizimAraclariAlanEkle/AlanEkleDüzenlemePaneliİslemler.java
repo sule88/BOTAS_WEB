@@ -172,16 +172,16 @@ public class AlanEkleDüzenlemePaneliİslemler extends testAutomations.TestBase 
 
 
         Actions builder1 = new Actions(driver);
-        builder1.moveToElement(haritayatikla).clickAndHold().moveByOffset(0, 300).release().perform();
+        builder1.moveToElement(haritayatikla).clickAndHold().moveByOffset(0, 150).release().perform();
         builder1.click().perform();
 
 
         Actions builder2 = new Actions(driver);
-        builder2.moveToElement(haritayatikla).clickAndHold().moveByOffset(300, 0).release().perform();
+        builder2.moveToElement(haritayatikla).clickAndHold().moveByOffset(150, 0).release().perform();
         builder2.doubleClick().perform();
 
         Actions builder3 = new Actions(driver);
-        builder3.moveToElement(haritayatikla).clickAndHold().moveByOffset(0, -300).release().perform();
+        builder3.moveToElement(haritayatikla).clickAndHold().moveByOffset(0, -150).release().perform();
         builder3.doubleClick().perform();
 
 
@@ -194,6 +194,7 @@ public class AlanEkleDüzenlemePaneliİslemler extends testAutomations.TestBase 
         Fwait.until(ExpectedConditions.visibilityOf(metinadiimlec));
         metinadiimlec.click();
         metinadiimlec.sendKeys("Metin3");
+        metinadiimlec.clear();
 
 
         Fwait.until(ExpectedConditions.visibilityOf(stilBtn));

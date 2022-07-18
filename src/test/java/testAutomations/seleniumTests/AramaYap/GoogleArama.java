@@ -25,9 +25,6 @@ public class GoogleArama extends testAutomations.TestBase {
 
 
 
-
-
-
     @Test
     public void testGoogleArama() throws Exception {
         PageFactory.initElements(driver, this);
@@ -61,7 +58,7 @@ public class GoogleArama extends testAutomations.TestBase {
         aramaicerik.sendKeys(Keys.DOWN);
         aramaicerik.sendKeys(Keys.ENTER);
 
-        Thread.sleep(3000);
+
 
 
 

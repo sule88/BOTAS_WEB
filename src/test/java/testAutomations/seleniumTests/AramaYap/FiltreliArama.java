@@ -27,14 +27,14 @@ public class FiltreliArama extends testAutomations.TestBase {
     @FindBy(xpath = "//button[@id='search-button-dynamic-query']")
     public WebElement araButonu2;
 
-//    @FindBy(xpath= "//body/div[@id='jsPanel-1']/div[1]/div[1]/div[3]/button[4]")
-//    public WebElement sayfaBuyutİslevi;
+    @FindBy(xpath= "//body/div[@id='jsPanel-1']/div[1]/div[1]/div[3]/button[4]")
+    public WebElement sayfaBuyutİslevi;
 
-    @FindBy(css= "#check_filter_data1")
+    @FindBy(xpath= "//body[1]/div[8]/div[3]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/label[1]")
     public WebElement secimYapButonu;
 
 
-    //SEÇİM YAP KISMINDA PROJE YANINDAKİ KUTUCUĞA TIKLANMADI.
+    //SEÇİM BUTONUNA TIKLAMA İŞLEMİ GERÇEKLEŞTİRİLDİ. HARİTADA GÖR BUTONUNA TIKLANDIKTAN SONRA KONTROL EDİLMESİ GEREKLİ
 
     @FindBy(xpath = "//button[contains(.,' Haritada Gör')]")
     public WebElement haritadaGorButonu;
@@ -67,17 +67,28 @@ public class FiltreliArama extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(araButonu2));
         araButonu2.click();
 
+        Thread.sleep(2000);
+
 //        Fwait.until(ExpectedConditions.visibilityOf(sayfaBuyutİslevi));
-//        sayfaBuyutİslevi.click();
+        sayfaBuyutİslevi.click();
+        Thread.sleep(2000);
+
 
 //        Fwait.until(ExpectedConditions.visibilityOf(secimYapButonu));
 //        secimYapButonu.click();
 
-        Fwait.until(ExpectedConditions.visibilityOf(secimYapButonu));
-        secimYapButonu.click();
+        js.executeScript("document.querySelector('#check_filter_data1').click()");
+
+//        Fwait.until(ExpectedConditions.visibilityOf(secimYapButonu));
+//        secimYapButonu.click();
+
 
         Fwait.until(ExpectedConditions.visibilityOf(haritadaGorButonu));
         haritadaGorButonu.click();
+
+        Thread.sleep(30000);
+
+
 
 
         System.out.println("Test Tamamlandı!");

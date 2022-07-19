@@ -98,16 +98,16 @@ public class Mesafeanalizaraci extends testAutomations.TestBase {
 
 
         Actions builder1 = new Actions(driver);
-        builder1.moveToElement(haritayatikla).clickAndHold().moveByOffset(0, 300).release().perform();
+        builder1.moveToElement(haritayatikla).clickAndHold().moveByOffset(0, 200).release().perform();
         builder1.click().perform();
 
 
         Actions builder2 = new Actions(driver);
-        builder2.moveToElement(haritayatikla).clickAndHold().moveByOffset(300, 0).release().perform();
+        builder2.moveToElement(haritayatikla).clickAndHold().moveByOffset(200, 0).release().perform();
         builder2.doubleClick().perform();
 
         Actions builder3 = new Actions(driver);
-        builder3.moveToElement(haritayatikla).clickAndHold().moveByOffset(0, -300).release().perform();
+        builder3.moveToElement(haritayatikla).clickAndHold().moveByOffset(0, -200).release().perform();
         builder3.doubleClick().perform();
 
 

@@ -117,7 +117,7 @@
 <!--                        <include>*/seleniumTests/CizimAraclariAlanEkle/AlanEkleDüzenlemePaneliİslemler.java</include>-->
 
 
-<!--                        <include>*/seleniumTests/DigerAraclar/GörünürAlandakiVeriler.java</include>-->
+                        <include>*/seleniumTests/YoneticiPaneli/Haritacikis.java</include>
 <!--                        <include>*/seleniumTests/DigerAraclar/Mesafeanalizaraci.java</include>-->
 <!--                        <include>*/seleniumTests/CizimAraclariMetinEkle/MetinEkleDüzenlemePaneliindir.java</include>-->
 <!--                        <include>*/seleniumTests/OlcumAraclari/AlanOlcmeAraci.java</include>&ndash;&gt;-->
@@ -144,7 +144,7 @@
 
 
                         <!--                        Yazılmış olan tüm classları çalıştırmak için-->
-                        <include>*/seleniumTests/*/*.java</include>
+<!--                        <include>*/seleniumTests/*/*.java</include>-->
 
                     </includes>
                 </configuration>

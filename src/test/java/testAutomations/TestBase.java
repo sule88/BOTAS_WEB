@@ -93,7 +93,7 @@ public class TestBase extends TestCase {
         if (isHeadless) {
             options.addArguments("--headless");
             options.addArguments("--disable-gpu");
-            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--window-size=1280,1024");
             options.addArguments("--disable-extensions");
         }
 

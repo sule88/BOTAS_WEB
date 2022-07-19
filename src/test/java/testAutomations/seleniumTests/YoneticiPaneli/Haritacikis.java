@@ -44,6 +44,8 @@ public class Haritacikis extends testAutomations.TestBase {
         Fwait.until(ExpectedConditions.visibilityOf(yoneticiPanelButonu));
         yoneticiPanelButonu.click();
 
+
+        Thread.sleep(5000);
         Fwait.until(ExpectedConditions.visibilityOf(cikisButonu));
         cikisButonu.click();
 

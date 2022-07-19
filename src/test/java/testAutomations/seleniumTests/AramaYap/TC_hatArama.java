@@ -10,10 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import testAutomations.Kullanici;
 
-/**
- * @author Emre Örs
- * @Date 25.04.2022
- */
+
 public class TC_hatArama extends testAutomations.TestBase {
     private String baseUrl;
     private boolean acceptNextAlert = true;
